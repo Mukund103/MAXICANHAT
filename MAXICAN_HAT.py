@@ -25,5 +25,5 @@ while(epoch<=epoch_max):
             x_old[i]=x_in[i]
     #step 6 (increment epoch)       
     epoch+=1
-  
+#contrast of signal after 10 epoch  
 print(x_old)
