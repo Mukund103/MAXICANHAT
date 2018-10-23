@@ -12,7 +12,7 @@ epoch=1
 x_old=s
 x_in=[0]*len(x_old)
 x=[1,2,3,4,5,6,7]
-py.plot(x,s,color='blue', linestyle='dashed', marker='o',markerfacecolor='yellow', markersize=30)
+py.plot(x,s,color='blue', linestyle='dashed', marker='H',markerfacecolor='yellow', markersize=30)
 #step 2
 while(epoch<=epoch_max):
     #step3 (compute net i/p to a node)
@@ -30,4 +30,4 @@ while(epoch<=epoch_max):
     epoch+=1
 #contrast of signal after 10 epoch  
 print(x_old)
-py.plot(x,x_old,color='green', linestyle='dashed', marker='o',markerfacecolor='red', markersize=12)
+py.plot(x,x_old,color='green', linestyle='dashed', marker='H',markerfacecolor='red', markersize=12)
