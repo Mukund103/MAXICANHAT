@@ -16,13 +16,13 @@ py.plot(x,s,color='blue', linestyle='dashed', marker='H',markerfacecolor='yellow
 #step 2
 while(epoch<=epoch_max):
     #step3 (compute net i/p to a node)
-    for i in range(len(x)):
+    for i in range(len(x_old)):
             a=[x_old[j] for j in range(i-r1,i+r1+1) if j>=0 and j<len(x_old)]
             b=[x_old[j] for j in range(i+r1+1,i+r2+1) if j<len(x_old)]
             c=[x_old[j] for j in range(i-r1-1,i-r1-r2,-1) if j>=0 and j<len(x_old)]
             x_in[i]=w1*sum(a)+w2*sum(b)+w2*sum(c)
     #step 4 (apply activation function )
-    for i in range(len(x)):
+    for i in range(len(x_old)):
             x_in[i]=min(max(0,x_in[i]),x_max)
             #step 5(update x_old)
             x_old[i]=x_in[i]
